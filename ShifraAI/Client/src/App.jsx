@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Routes, Route } from 'react-router-dom' 
+import { Routes, Route, Navigate } from 'react-router-dom' 
 import Login from './pages/Login'
 import Home from './pages/Home'
 import axios from 'axios'
+import Builder from './pages/Builder'
+import Billing from './pages/Billing'
+import Navbar from './components/Navbar'
+import ProtectedRoute from './Components/ProtectedRoute.jsx'
 export const ServerUrl = "http://localhost:8000"
+import {Toaster} from "react-hot-toast"
 
 
 function App() {
 
   const [user,setUser] = useState(null)
-  const [loading,setLoading] = useState(false)
+  const [loading,setLoading] = useState(true)
 
   useEffect(()=>{
 
@@ -35,9 +40,20 @@ function App() {
 
   return (
     <>
+        <Toaster position='top-right'/>
+
         <Routes>
-          <Route  path='/' element={<Home/>}/>
-          <Route  path='/login' element={<Login/>}/>
+          <Route  path='/login' element={<Login setUser={setUser}/>}/>
+  
+          <Route path='/*' element={<ProtectedRoute user = {user} loading={loading}>
+             <Navbar setUser={setUser} user={user}/>
+             <Routes>
+               <Route  path='/' element={<Home user={user}/>}/>
+               <Route path='/builder' element={<Builder user={user} setuser={setUser}/>} />
+                <Route path='/billing' element={<Billing user={user}/>} />
+                <Route path='/' element={<Navigate to="/" replace/>} />
+             </Routes>
+          </ProtectedRoute>} />
         </Routes>
     </>
       
