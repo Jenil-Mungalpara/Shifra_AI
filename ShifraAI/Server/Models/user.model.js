@@ -23,15 +23,15 @@ const userSchema = new mongoose.Schema({
         type:String,
         default:"Shifra"
     },
-    buisnessName:{
+    businessName:{       
         type:String,
         default:""
     },
-    buisnessType:{
+    businessType:{       
         type:String,
-        defaukt:""
+        default:""       
     },
-    buisnessDescription:{
+    businessDescription:{ 
         type:String,
         default:""
     },
@@ -83,7 +83,7 @@ const userSchema = new mongoose.Schema({
         type:Date,
         default:null
     },
-    iseSetupComplete:{
+    isSetupComplete:{
         type:Boolean,
         default:false
     }
