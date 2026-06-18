@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import { FiPlus } from "react-icons/fi";
-import { FiTrash } from "react-icons/fi";
+import { FiTrash , FiCopy } from "react-icons/fi";
 import axios from 'axios'; 
 import toast from 'react-hot-toast'; 
+import { CLIENT_URL } from '../App';
 
 const ServerUrl = "http://localhost:8000";
 
@@ -106,6 +107,8 @@ const Builder = ({user,setUser}) => {
          )
       : 0;
 
+      const embedCode = `<script src="${CLIENT_URL}/assistant.js" data-user-id="${user?._id}"></script>`;
+
 
   return (
     <div className='min-h-screen bg-slate-100 px-4 py-8'>
@@ -165,8 +168,61 @@ const Builder = ({user,setUser}) => {
                   </div>
                </div>
 
+               <div className='mt-7'>
+
+                  <div className='mt-4 rounded-2xl bg-amber-50 border border-amber-200 p-4'>
+
+                     <p className='text-sm font-semibold text-amber-900'>
+                        where to paste this script ?
+                     </p>
+                     <p className='text-sm text-amber-700 mt-2
+                     leading-6'>
+                     Paste this script before the closing
+                     {" "}
+                     <span className="font-semibold">
+                        {"</body>"}
+                     </span>
+                     {" "}
+                     tag of your website HTML file.
+                     <br />
+                     <br />
+                     Example:
+                     </p>
+
+                     <pre className='mt-3 bg-[#0b1020] text-emerald-400 rounded-xl p-3 text-xs font-mono overflow-x-auto'>
+
+                          {`<body>
+                          
+Your Website Content 
+
+<script src="${CLIENT_URL}/assistant.js" data-user-id="${user?._id}"> 
+</script> 
+
+</body>`} 
+                     </pre>
+                  </div>
+
+                  <p className='text-sm font-medium text-[#081028] mb-3 mt-3'>Embed code</p>
+               </div>
+
+               <div className='relative'>
+                  <textarea readOnly value={embedCode} className='w-full
+                  h-20 bg-[#0b1020] text-emerald-400 rounded-2xl p-4
+                  text-sm font-mono resize-none outline-none'/>
+                  <button onClick={()=>{
+                     navigator.clipboard.writeText(embedCode);
+                     toast.success("Copied")
+                  }} className='absolute top-4 right-4 w-10 h-10
+                  rounded-xl bg-white flex items-center
+                  justify-center'><FiCopy/></button>
+               </div>
+
+               <button onClick={()=>setEditAssistant(true)} className='mt-6 h-12 px-6 rounded-2xl
+               bg-gradient-to-r from-purple-500 to-emerald-500
+               text-white font-medium'>Edit Assistant</button>
 
              </div>
+             
           )}
 
           {editAssistant && <div className='space-y-6'>

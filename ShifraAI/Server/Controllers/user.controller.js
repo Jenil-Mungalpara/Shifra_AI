@@ -18,9 +18,9 @@ export const saveAssistant = async(req,res)=>{
     try {
         const {
             assistantName,
-            businessName, // Fixed spelling
-            businessType, // Fixed spelling
-            businessDescription, // Fixed spelling
+            businessName, 
+            businessType, 
+            businessDescription, 
             tone,
             theme,
             geminiApiKey,
