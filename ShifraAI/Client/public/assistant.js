@@ -8,7 +8,7 @@
 
     const theme = "dark"
 
-    const assistantConfig = null
+    let assistantConfig = null
 
     //load - css 
  
@@ -96,6 +96,51 @@
         open = !open;
         popup.style.display = open ? "flex" : "none";
     }
+
+    // load assistant
+
+    const loadAssistant = async()=>{
+        try {
+            const res = await fetch(`http://localhost:8000/api/assistant/config/${userId}`)
+
+            const data = await res.json()
+
+            console.log(data)
+
+            if(data){
+                assistantConfig = data.user
+                applyConfig()
+            }
+
+        } catch (error) {
+            console.log(`Assistant load error : ${error}`)
+        }
+    }
+
+    const applyConfig = ()=>{
+        if(!assistantConfig) return;
+        
+        popup.className = `shifra-popup theme-${assistantConfig.theme}`
+
+        button.className = `shifra-btn theme-${assistantConfig.button}`
+
+        const title = popup.querySelector(".shifra-title")
+
+        title.innerHTML = `Hello ! I am ${assistantConfig.assistantName}`;
+
+        const subTitle = popup.querySelector(".shifra-sub")
+        subTitle.innerHTML=`
+        Welcome to 
+        ${assistantConfig.businessName}.
+        <br />
+        Ask anything about your website.
+        `;
+
+    }
+
+    loadAssistant()
+
+
 
 
 
