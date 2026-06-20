@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FiPlus } from "react-icons/fi";
 import { FiTrash, FiCopy } from "react-icons/fi";
 import axios from 'axios';
@@ -34,6 +34,21 @@ const Builder = ({ user, setUser }) => {
    const [geminiApiKey, setGeminiApiKey] = useState(user?.geminiApiKey || "")
 
    const [pages, setPages] = useState(user?.pages || []);
+
+   // Sync form state when user prop updates (e.g. after refresh)
+   useEffect(() => {
+      if (user) {
+         setEditAssistant(!user.isSetupComplete)
+         setAssistantName(user.assistantName || "")
+         setBusinessName(user.businessName || "")
+         setBusinessType(user.businessType || "")
+         setBusinessDescription(user.businessDescription || "")
+         setTheme(user.theme || "dark")
+         setTone(user.tone || "friendly")
+         setGeminiApiKey(user.geminiApiKey || "")
+         setPages(user.pages || [])
+      }
+   }, [user])
    const [pageName, setPageName] = useState("");
    const [pagePath, setPagePath] = useState("");
    const [pageKeywords, setPageKeywords] = useState("");

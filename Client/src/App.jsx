@@ -27,7 +27,7 @@ function App() {
         {withCredentials:true}
         )
         console.log(res.data)
-        setUser(res.data)
+        setUser(res.data.user)
         setLoading(false)
       } 
       catch (error) {
