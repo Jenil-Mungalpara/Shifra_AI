@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import axios from 'axios'
 import Builder from './pages/Builder'
 import Billing from './pages/Billing'
-import Navbar from './components/Navbar'
+import Navbar from './Components/Navbar'
 import ProtectedRoute from './Components/ProtectedRoute.jsx'
 export const ServerUrl = "http://localhost:8000"
 export const CLIENT_URL = "http://localhost:5173"
