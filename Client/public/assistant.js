@@ -16,7 +16,7 @@
 
   link.rel = "stylesheet"
 
-  link.href = "http://localhost:5173/assistant.css"
+  link.href = "https://shifraai-n3v9.onrender.com/assistant.css"
 
   document.head.appendChild(link)
 
@@ -69,7 +69,7 @@
     
     <button class="shifra-mic">
       <img
-        src="http://localhost:5173/mic.png"
+        src="https://shifraai-n3v9.onrender.com/mic.png"
         alt="mic"
         class="shifra-mic-icon"
       />
@@ -87,7 +87,7 @@
 
   button.className = `shifra-btn theme-${theme}`
   button.innerHTML = `
-       <img  src="http://localhost:5173/logo.svg" alt="logo"/>
+       <img  src="https://shifraai-n3v9.onrender.com/logo.svg" alt="logo"/>
     `
   document.body.appendChild(button)
 
