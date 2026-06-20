@@ -1,13 +1,17 @@
-import express from "express"
 import dotenv from "dotenv"
+dotenv.config() 
+
+console.log("LOADED KEY ID:", process.env.RAZORPAY_KEY_ID);
+console.log("LOADED SECRET EXISTS?:", !!process.env.RAZORPAY_KEY_SECRET);
+
+import express from "express"
 import connectDB from "./Configs/ConnectDB.js"
 import authRouter from "./Routes/auth.route.js"
 import cookieParser from "cookie-parser"
-dotenv.config()
 import cors from "cors"
 import userRouter from "./Routes/user.route.js"
 import assistantRouter from "./Routes/assistant.route.js"
-
+import billingrouter from "./Routes/billing.route.js"
 
 const app = express()
 
@@ -35,6 +39,9 @@ app.get("/",(req,res)=>{
 
 app.use("/api/auth",privateCors,authRouter)
 app.use("/api/user",privateCors,userRouter)
+app.use("/api/billing",privateCors,billingrouter)
+
+
 app.use("/api/assistant",publicCors,assistantRouter)
 const PORT = process.env.PORT
 
