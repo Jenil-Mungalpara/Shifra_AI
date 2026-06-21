@@ -9,7 +9,7 @@ import Billing from './pages/Billing'
 import Navbar from './Components/Navbar'
 import ProtectedRoute from './Components/ProtectedRoute.jsx'
 export const ServerUrl = "https://shifra-ai-lqhq.onrender.com"
-export const CLIENT_URL = "http://localhost:5173"
+export const CLIENT_URL = "https://shifraai-n3v9.onrender.com"
 import {Toaster} from "react-hot-toast"
 
 
