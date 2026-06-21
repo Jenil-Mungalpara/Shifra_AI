@@ -20,7 +20,7 @@
 
 <br />
 
-[🚀 Get Started](#-quick-start) · [✨ Features](#-features) · [📸 Screenshots](#-screenshots) · [🛠️ Tech Stack](#️-tech-stack) · [📂 Project Structure](#-project-structure) · [🤝 Contributing](#-contributing)
+[🚀 Get Started](#-quick-start) · [✨ Features](#-features) ·  · [🛠️ Tech Stack](#️-tech-stack) · [📂 Project Structure](#-project-structure) ·
 
 </div>
 
