@@ -12,7 +12,7 @@
 
 <br />
 
-🌐 **Live Demo:** [https://shifra-ai.vercel.app](https://shifra-ai.vercel.app) &nbsp;|&nbsp; 🖥️ **Server:** [https://shifra-ai-lqhq.onrender.com](https://shifra-ai-lqhq.onrender.com)
+🌐 **Live Demo:** [[https://shifra-ai.vercel.app](https://shifraai-n3v9.onrender.com)] &nbsp;|&nbsp; 🖥️ **Server:** [https://shifra-ai-lqhq.onrender.com](https://shifra-ai-lqhq.onrender.com)
 
 <br />
 
