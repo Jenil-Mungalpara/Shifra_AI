@@ -43,29 +43,6 @@
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-### 🔑 Login Page
-> Sleek onboarding with Google OAuth and feature showcase
-
-### 🏠 Home / Landing Page
-> Hero section with animated assistant preview and step-by-step setup guide
-
-### 🔧 Assistant Builder
-> No-code dashboard to customize your AI assistant — name, tone, theme, API key, and navigation pages
-
-### 💳 Billing Page
-> Free vs Pro plan comparison with Razorpay payment integration
-
-### 🤖 Embeddable Widget
-> The voice assistant widget that lives on your website — supports Dark, Light, Glass, and Neon themes
-
-</div>
-
----
-
 ## 🛠️ Tech Stack
 
 ### Frontend
