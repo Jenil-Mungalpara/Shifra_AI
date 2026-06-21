@@ -303,18 +303,6 @@ Navigate to `http://localhost:5173` — you're all set! 🎉
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
----
-
 ## 📝 Environment Variables Reference
 
 ### Server (`Server/.env`)
@@ -339,18 +327,3 @@ Contributions are welcome! Here's how you can help:
 | `VITE_FIREBASE_APP_ID` | Firebase app ID |
 | `VITE_RAZORPAY_KEY_ID` | Razorpay key for client |
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-### Built with ❤️ by [Jenil Mungalpara](https://github.com/Jenil-Mungalpara)
-
-⭐ **Star this repo** if you found it useful!
-
-</div>
