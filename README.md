@@ -20,7 +20,7 @@
 
 <br />
 
-[🚀 Get Started](#-quick-start) · [✨ Features](#-features) ·  · [🛠️ Tech Stack](#️-tech-stack) · [📂 Project Structure](#-project-structure) ·
+[🚀 Get Started](#-quick-start) · [✨ Features](#-features) · [🛠️ Tech Stack](#️-tech-stack) · [📂 Project Structure](#-project-structure) ·
 
 </div>
 
